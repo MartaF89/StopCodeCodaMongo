@@ -109,7 +109,7 @@ app.delete("/coda/:id", async (req, res) => {
     { $set: { servito: true } } //modifica da eseguire
   );
 
-  result.matchedCount === 0 // se matchedCount ===0 vuol dire che non c e nessuna pers con quell id quindi:
+  result.matchedCount === 0 // se matchedCount === 0 vuol dire che non c e nessuna pers con quell id quindi:
     ? res.status(404).send({ errore: "ID non trovato" })
     : res.send({ messaggio: "Servito ✅" }); //altrimenti
 });
